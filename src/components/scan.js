@@ -9,6 +9,7 @@ const ScanPage = () => {
     if (scanData && scanData !== '') {
       setData(scanData);
     }
+    console.log(scanData);
   };
   const handleError = (err) => {
     console.log(err);
@@ -26,6 +27,7 @@ const ScanPage = () => {
       </Row>
       <Row className="row shadow-lg p-5 bg-white rounded justify-content-center">
         <Col md={8}>
+          {' '}
           <QrReader
             delay={500}
             onError={handleError}
@@ -35,7 +37,6 @@ const ScanPage = () => {
           ></QrReader>
         </Col>
       </Row>
-      <Row>{data}</Row>
     </Container>
   );
 };
