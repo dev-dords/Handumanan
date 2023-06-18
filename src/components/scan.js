@@ -6,8 +6,7 @@ import { useState } from 'react';
 const ScanPage = () => {
   const [data, setData] = useState('');
   const webcamScan = async (scanData) => {
-    console.log(scanData);
-    if (scanData) setData(scanData);
+    if (scanData && scanData !== '') setData(scanData).then();
   };
   const handleError = (err) => {
     console.log(err);
