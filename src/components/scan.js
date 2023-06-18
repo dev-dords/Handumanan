@@ -17,7 +17,7 @@ class ScanPage extends Component {
       this.setState({ webcamError: error });
     }
   }
-  webcamScan(result) {
+  async webcamScan(result) {
     console.log(result);
     if (result) {
       this.setState({ webcamResult: result });
@@ -25,28 +25,29 @@ class ScanPage extends Component {
   }
   render() {
     return (
-      <Container
-        fluid="sm"
-        className="mainContainer justify-content-center text-align-center"
-        style={{ maxWidth: '800px' }}
-      >
-        <Row>
-          <h3 className="text-center text-sm-start text-muted">
-            QR Code Scanner
-          </h3>
-        </Row>
-        <Row className="row shadow-lg p-5 bg-white rounded justify-content-center">
-          <Col md={8}>
-            <QrReader
-              delay={300}
-              onError={this.webcamError}
-              onScan={this.webcamScan}
-              facingMode={'user'}
-            ></QrReader>
-          </Col>
-        </Row>
-        <Row>{this.state.webcamResult}</Row>
-      </Container>
+      // <Container
+      //   fluid="sm"
+      //   className="mainContainer justify-content-center text-align-center"
+      //   style={{ maxWidth: '800px' }}
+      // >
+      //   <Row>
+      //     <h3 className="text-center text-sm-start text-muted">
+      //       QR Code Scanner
+      //     </h3>
+      //   </Row>
+      //   <Row className="row shadow-lg p-5 bg-white rounded justify-content-center">
+      //     <Col md={8}>
+
+      //     </Col>
+      //   </Row>
+      //   <Row>{this.state.webcamResult}</Row>
+      // </Container>
+      <QrReader
+        delay={300}
+        onError={this.webcamError}
+        onScan={this.webcamScan}
+        facingMode={'user'}
+      ></QrReader>
     );
   }
 }
