@@ -12,11 +12,13 @@ class ScanPage extends Component {
     };
   }
   webcamError(error) {
+    console.log(error);
     if (error) {
       this.setState({ webcamError: error });
     }
   }
   webcamScan(result) {
+    console.log(result);
     if (result) {
       this.setState({ webcamResult: result });
     }
