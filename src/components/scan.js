@@ -5,12 +5,9 @@ import { Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
 const ScanPage = () => {
   const [data, setData] = useState('');
-  const [isScanning, setIsScanning] = useState(true);
   const webcamScan = (scanData) => {
     if (scanData && scanData !== '') {
-      setIsScanning(false).then(()=>{
-        setData(scanData);
-      })
+      setData(scanData);
     }
   };
   const handleError = (err) => {
@@ -29,15 +26,13 @@ const ScanPage = () => {
       </Row>
       <Row className="row shadow-lg p-5 bg-white rounded justify-content-center">
         <Col md={8}>
-          {isScanning && (
-            <QrReader
-              delay={500}
-              onError={handleError}
-              onScan={webcamScan}
-              onResult={webcamScan}
-              facingMode={'user'}
-            ></QrReader>
-          )}
+          <QrReader
+            delay={500}
+            onError={handleError}
+            onScan={webcamScan}
+            onResult={webcamScan}
+            facingMode={'user'}
+          ></QrReader>
         </Col>
       </Row>
       <Row>{data}</Row>
