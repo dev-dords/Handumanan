@@ -1,4 +1,4 @@
 const Homepage = () => {
-  return <div className="main-container"></div>;
+  return <div className="main-container">Homepage</div>;
 };
 export default Homepage;

@@ -5,12 +5,12 @@ export const NavigationBar = () => {
   return (
     <Navbar bg="light" className="border">
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand as={Link} to="/Handumanan">
           <img src={logo} width="90" height="90" alt="" />
         </Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link as={Link} to="/register">Register</Nav.Link>
-          <Nav.Link as={Link} to="/scan">Scan</Nav.Link>
+          <Nav.Link as={Link} to="/Handumanan/register">Register</Nav.Link>
+          <Nav.Link as={Link} to="/Handumanan/scan">Scan</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

@@ -5,7 +5,7 @@ import Homepage from './components/homepage';
 import RegisterPage from './components/register';
 import { NavigationBar } from './components/navigationbar';
 import ScanPage from './components/scan';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, redirect } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
       <main>
         <Container>
           <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/scan" element={<ScanPage />} />
-            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/Handumanan" element={<Homepage />} />
+            <Route path="/Handumanan/scan" element={<ScanPage />} />
+            <Route path="/Handumanan/register" element={<RegisterPage />} />
           </Routes>
         </Container>
       </main>
