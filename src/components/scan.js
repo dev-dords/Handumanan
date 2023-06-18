@@ -26,9 +26,10 @@ const ScanPage = () => {
       <Row className="row shadow-lg p-5 bg-white rounded justify-content-center">
         <Col md={8}>
           <QrReader
-            delay={300}
+            delay={500}
             onError={handleError}
             onScan={webcamScan}
+            onResult={webcamScan}
             facingMode={'user'}
           ></QrReader>
         </Col>
