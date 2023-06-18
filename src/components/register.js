@@ -97,7 +97,7 @@ class RegisterPage extends Component {
     const qrcode = (
       <QRCodeCanvas
         id="qrCode"
-        value={this.state.qrval}
+        value={this.state.email}
         size={150}
         bgColor={'#FFFFFF'}
         level={'H'}

@@ -1,13 +1,27 @@
-import { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import { QrReader } from 'react-qr-reader';
 import { Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
+import axios from 'axios';
 const ScanPage = () => {
   const [data, setData] = useState('');
-  const webcamScan = (scanData) => {
+  // const [hasRead, setHasRead] = useState(false);
+  const webcamScan = async (scanData) => {
     if (scanData && scanData !== '') {
-      setData(scanData);
+      setData(scanData).then(() => {
+        axios
+          .get(
+            'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/attendee',
+            {
+              params: {
+                id: scanData,
+              },
+            }
+          )
+          .then((response) => {
+            console.log(response);
+          });
+      });
     }
     console.log(scanData);
   };
