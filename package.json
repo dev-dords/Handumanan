@@ -10,6 +10,7 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
     "crypto-hash": "^2.0.1",
+    "jspdf": "^2.5.1",
     "qrcode.react": "^3.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",

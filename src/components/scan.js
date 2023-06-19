@@ -63,6 +63,7 @@ const ScanPage = () => {
             onScan={webcamScan}
             onResult={webcamScan}
             facingMode={'user'}
+            style={{ width: '200px', heigth: '100px' }}
           ></QrReader>
         </Col>
       </Row>

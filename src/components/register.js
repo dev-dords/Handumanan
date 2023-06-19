@@ -4,6 +4,7 @@ import { QRCodeCanvas } from 'qrcode.react';
 import { sha1 } from 'crypto-hash';
 import axios from 'axios';
 import ModalClass from './modalclass';
+import { jsPDF } from 'jspdf';
 class RegisterPage extends Component {
   constructor(props) {
     super(props);
@@ -65,35 +66,44 @@ class RegisterPage extends Component {
       email: this.state.email,
       hashedid: this.state.qrval,
     };
-    axios
-      .post(
-        'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/register',
-        data
-      )
-      .then(() => {
-        this.downloadQR();
-      })
-      .then(() => {
-        this.setState({
-          firstname: '',
-          lastname: '',
-          email: '',
-          qrval: '',
-          show: false,
-        });
-      });
+    // axios
+    //   .post(
+    //     'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/register',
+    //     data
+    //   )
+    //   .then(() => {
+    //     this.downloadQR();
+    //   })
+    //   .then(() => {
+    //     this.setState({
+    //       firstname: '',
+    //       lastname: '',
+    //       email: '',
+    //       qrval: '',
+    //       show: false,
+    //     });
+    //   });
+    this.downloadQR();
   }
   downloadQR() {
+    var doc = new jsPDF();
+    doc.text(10, 10, 'Handumanan: Saramok Ticket Receipt');
+    doc.text(10, 20, 'Guest Details:');
+    doc.text(10, 30, `${this.state.firstname} ${this.state.lastname}`);
+    doc.text(10, 40, `${this.state.year}`);
+    doc.text(10, 50, `${this.state.email}`);
+    doc.text(10, 60, 'Kindly show this qr code upon arrival at the venue.');
     let canvas = this.qrImg.current.querySelector('canvas');
-    let image = canvas.toDataURL('image/png');
-    let anchor = document.createElement('a');
-    anchor.style.width = '100px';
-    anchor.style.height = '100px';
-    anchor.href = image;
-    anchor.download = `qr-code.png`;
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
+    let image = canvas.toDataURL('image/jpeg');
+    doc.addImage(image, 'JPEG', 50, 70, 50, 50);
+    doc.save('qr.pdf');
+
+    // let anchor = document.createElement('a');
+    // anchor.href = image;
+    // anchor.download = `qr-code.png`;
+    // document.body.appendChild(anchor);
+    // anchor.click();
+    // document.body.removeChild(anchor);
   }
   render() {
     const qrcode = (
