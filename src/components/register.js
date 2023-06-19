@@ -66,24 +66,23 @@ class RegisterPage extends Component {
       email: this.state.email,
       hashedid: this.state.qrval,
     };
-    // axios
-    //   .post(
-    //     'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/register',
-    //     data
-    //   )
-    //   .then(() => {
-    //     this.downloadQR();
-    //   })
-    //   .then(() => {
-    //     this.setState({
-    //       firstname: '',
-    //       lastname: '',
-    //       email: '',
-    //       qrval: '',
-    //       show: false,
-    //     });
-    //   });
-    this.downloadQR();
+    axios
+      .post(
+        'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/register',
+        data
+      )
+      .then(() => {
+        this.downloadQR();
+      })
+      .then(() => {
+        this.setState({
+          firstname: '',
+          lastname: '',
+          email: '',
+          qrval: '',
+          show: false,
+        });
+      });
   }
   downloadQR() {
     var doc = new jsPDF();
@@ -97,13 +96,6 @@ class RegisterPage extends Component {
     let image = canvas.toDataURL('image/jpeg');
     doc.addImage(image, 'JPEG', 50, 70, 50, 50);
     doc.save('qr.pdf');
-
-    // let anchor = document.createElement('a');
-    // anchor.href = image;
-    // anchor.download = `qr-code.png`;
-    // document.body.appendChild(anchor);
-    // anchor.click();
-    // document.body.removeChild(anchor);
   }
   render() {
     const qrcode = (
