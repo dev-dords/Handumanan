@@ -97,7 +97,7 @@ class RegisterPage extends Component {
     const qrcode = (
       <QRCodeCanvas
         id="qrCode"
-        value={this.state.email}
+        value={this.state.qrval}
         size={150}
         bgColor={'#FFFFFF'}
         level={'H'}
@@ -110,10 +110,12 @@ class RegisterPage extends Component {
         style={{ maxWidth: '800px' }}
       >
         <ModalClass
-          message = "Do you want to proceed with the registration"
+          title="Please confirm"
+          message="Do you want to proceed with the registration"
           handleClose={this.handleClose}
           handleSave={this.handleSave}
           show={this.state.show}
+          confirmButton={true}
         />
         <Row>
           <h3 className="text-center text-sm-start text-muted">
