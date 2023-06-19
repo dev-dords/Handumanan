@@ -20,7 +20,7 @@ const ScanPage = () => {
           }
         )
         .then((response) => {
-          if (response.data === 'true') {
+          if (response.data === true) {
             setMessage('Welcome registered guest!');
           } else {
             setMessage('Guest is not registered.');

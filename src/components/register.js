@@ -87,8 +87,8 @@ class RegisterPage extends Component {
     let canvas = this.qrImg.current.querySelector('canvas');
     let image = canvas.toDataURL('image/png');
     let anchor = document.createElement('a');
-    anchor.style.width = '200px';
-    anchor.style.height = '200px';
+    anchor.style.width = '150px';
+    anchor.style.height = '150px';
     anchor.href = image;
     anchor.download = `qr-code.png`;
     document.body.appendChild(anchor);
