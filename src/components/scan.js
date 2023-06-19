@@ -18,7 +18,7 @@ const ScanPage = () => {
           'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/attendee',
           {
             params: {
-              id: { data },
+              id: data,
             },
           }
         )
