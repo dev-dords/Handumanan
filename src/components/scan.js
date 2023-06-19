@@ -9,13 +9,14 @@ const ScanPage = () => {
   const [message, setMessage] = useState('');
   const webcamScan = async (scanData) => {
     if (scanData && scanData !== '') {
-      console.log(scanData.text);
+      const dataToUse = JSON.parse(scanData);
+      console.log(dataToUse);
       axios
         .get(
           'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/attendee',
           {
             params: {
-              id: scanData.text,
+              id: dataToUse,
             },
           }
         )
