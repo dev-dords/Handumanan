@@ -5,19 +5,17 @@ import { useState } from 'react';
 import axios from 'axios';
 import ModalClass from './modalclass';
 const ScanPage = () => {
-  const [data, setData] = useState('');
   const [show, setShow] = useState(false);
   const [message, setMessage] = useState('');
   const webcamScan = async (scanData) => {
     if (scanData && scanData !== '') {
-      setData(scanData);
-      console.log(scanData);
+      console.log(scanData.text);
       axios
         .get(
           'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/attendee',
           {
             params: {
-              id: toString({ scanData }),
+              id: scanData.text,
             },
           }
         )
