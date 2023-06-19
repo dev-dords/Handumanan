@@ -6,13 +6,11 @@ import axios from 'axios';
 import ModalClass from './modalclass';
 const ScanPage = () => {
   const [data, setData] = useState('');
-  const [hasRead, setHasRead] = useState(false);
   const [show, setShow] = useState(false);
   const [message, setMessage] = useState('');
   const webcamScan = async (scanData) => {
     if (scanData && scanData !== '') {
       setData(scanData);
-      setHasRead(true);
       axios
         .get(
           'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/attendee',
@@ -38,7 +36,6 @@ const ScanPage = () => {
   };
   const handleClose = () => {
     setShow(false);
-    setHasRead(false);
   };
   return (
     <Container
@@ -61,15 +58,13 @@ const ScanPage = () => {
       </Row>
       <Row className="row shadow-lg p-5 bg-white rounded justify-content-center">
         <Col md={8}>
-          {!hasRead && (
-            <QrReader
-              delay={500}
-              onError={handleError}
-              onScan={webcamScan}
-              onResult={webcamScan}
-              facingMode={'user'}
-            ></QrReader>
-          )}
+          <QrReader
+            delay={500}
+            onError={handleError}
+            onScan={webcamScan}
+            onResult={webcamScan}
+            facingMode={'user'}
+          ></QrReader>
         </Col>
       </Row>
     </Container>
