@@ -86,21 +86,14 @@ class RegisterPage extends Component {
   downloadQR() {
     let canvas = this.qrImg.current.querySelector('canvas');
     let image = canvas.toDataURL('image/png');
-
-    let parent = document.createElement('div');
-    parent.width = '250px';
-    parent.height = '250px';
-    parent.backgroundColor = 'white';
     let anchor = document.createElement('a');
-    anchor.style.width = '150px';
-    anchor.style.height = '150px';
-    anchor.style.margin = 'auto';
+    anchor.style.width = '100px';
+    anchor.style.height = '100px';
     anchor.href = image;
-    parent.append(anchor);
-    parent.download = `qr-code.png`;
-    document.body.appendChild(parent);
-    parent.click();
-    document.body.removeChild(parent);
+    anchor.download = `qr-code.png`;
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
   }
   render() {
     const qrcode = (
