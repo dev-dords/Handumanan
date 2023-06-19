@@ -47,9 +47,10 @@ class RegisterPage extends Component {
       this.setState({ empty: false });
     }
   }
-  async hashEmail(e) {
-    let value = await sha1(this.state.email);
-    this.setState({ qrval: value, generated: true });
+  // async
+  hashEmail(e) {
+    // let value = await sha1(this.state.email);
+    this.setState({ qrval: this.state.email, generated: true });
   }
   handleShow() {
     this.setState({ show: true });
