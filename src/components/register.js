@@ -85,7 +85,7 @@ class RegisterPage extends Component {
       });
   }
   downloadQR() {
-    let canvas = this.qrImg.current.querySelector('canvas');
+    let canvas = document.getElementById('qrid').current.querySelector('canvas');
     let image = canvas.toDataURL('image/png');
     let anchor = document.createElement('a');
     anchor.href = image;
@@ -190,7 +190,7 @@ class RegisterPage extends Component {
               </Form.Label>
             </Form.Group>
             <div className="qrcode__container">
-              <div ref={this.qrImg}>{qrcode}</div>
+              <div id="qrid">{qrcode}</div>
             </div>
           </Col>
           <Row className="justify-content-center">

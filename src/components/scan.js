@@ -10,7 +10,6 @@ const ScanPage = () => {
   const webcamScan = async (scanData) => {
     if (scanData && scanData !== '') {
       const dataToUse = JSON.parse(scanData);
-      console.log(dataToUse);
       axios
         .get(
           'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/attendee',
@@ -21,13 +20,12 @@ const ScanPage = () => {
           }
         )
         .then((response) => {
-          if (response.data === 'true') {
+          if (response.data === true) {
             setMessage('Welcome registered guest!');
           } else {
             setMessage('Guest is not registered.');
           }
           setShow(true);
-          console.log(response);
         });
     }
   };
