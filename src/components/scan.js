@@ -8,20 +8,19 @@ const ScanPage = () => {
   // const [hasRead, setHasRead] = useState(false);
   const webcamScan = async (scanData) => {
     if (scanData && scanData !== '') {
-      setData(scanData).then(() => {
-        axios
-          .get(
-            'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/attendee',
-            {
-              params: {
-                id: scanData,
-              },
-            }
-          )
-          .then((response) => {
-            console.log(response);
-          });
-      });
+      setData(scanData);
+      axios
+        .get(
+          'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/attendee',
+          {
+            params: {
+              id: scanData,
+            },
+          }
+        )
+        .then((response) => {
+          console.log(response);
+        });
     }
     console.log(scanData);
   };
