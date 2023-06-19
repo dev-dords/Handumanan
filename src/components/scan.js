@@ -11,12 +11,13 @@ const ScanPage = () => {
   const webcamScan = async (scanData) => {
     if (scanData && scanData !== '') {
       setData(scanData);
+      console.log(scanData);
       axios
         .get(
           'https://asia-south1.gcp.data.mongodb-api.com/app/handumananapi-ifmzb/endpoint/attendee',
           {
             params: {
-              id: {scanData},
+              id: toString({ scanData }),
             },
           }
         )
