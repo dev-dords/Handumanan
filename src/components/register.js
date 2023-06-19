@@ -47,10 +47,9 @@ class RegisterPage extends Component {
       this.setState({ empty: false });
     }
   }
-  // async
-  hashEmail(e) {
-    // let value = await sha1(this.state.email);
-    this.setState({ qrval: this.state.email, generated: true });
+  async hashEmail(e) {
+    let value = await sha1(this.state.email);
+    this.setState({ qrval: value, generated: true });
   }
   handleShow() {
     this.setState({ show: true });
@@ -72,7 +71,7 @@ class RegisterPage extends Component {
         data
       )
       .then(() => {
-        // this.downloadQR();
+        this.downloadQR();
       })
       .then(() => {
         this.setState({
@@ -88,6 +87,8 @@ class RegisterPage extends Component {
     let canvas = this.qrImg.current.querySelector('canvas');
     let image = canvas.toDataURL('image/png');
     let anchor = document.createElement('a');
+    anchor.style.width = '200px';
+    anchor.style.height = '200px';
     anchor.href = image;
     anchor.download = `qr-code.png`;
     document.body.appendChild(anchor);
