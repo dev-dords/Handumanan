@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import { QrReader } from 'react-qr-reader';
 import { Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
@@ -7,6 +7,7 @@ import ModalClass from './modalclass';
 const ScanPage = () => {
   const [show, setShow] = useState(false);
   const [message, setMessage] = useState('');
+  const [orientation, setOrientation] = useState('user');
   const webcamScan = async (scanData) => {
     if (scanData && scanData !== '') {
       console.log(scanData.text);
@@ -35,6 +36,13 @@ const ScanPage = () => {
   };
   const handleClose = () => {
     setShow(false);
+  };
+  const handleFlip = () => {
+    if (orientation === 'user') {
+      setOrientation('environment');
+    } else {
+      setOrientation('user');
+    }
   };
   return (
     <Container
@@ -66,6 +74,17 @@ const ScanPage = () => {
             style={{ width: '200px', heigth: '100px' }}
           ></QrReader>
         </Col>
+        <Row className="justify-content-center">
+          {' '}
+          <Button
+            className="btnHandumanan"
+            type="button"
+            size="md"
+            onClick={handleFlip}
+          >
+            Flip
+          </Button>
+        </Row>
       </Row>
     </Container>
   );
