@@ -37,14 +37,14 @@ const ScanPage = () => {
   const handleClose = () => {
     setShow(false);
   };
-  const handleFlip = () => {
-    console.log('clicked');
-    if (orientation === 'user') {
-      setOrientation('rear');
-    } else {
-      setOrientation('user');
-    }
-  };
+  // const handleFlip = () => {
+  //   console.log('clicked');
+  //   if (orientation === 'user') {
+  //     setOrientation('rear');
+  //   } else {
+  //     setOrientation('user');
+  //   }
+  // };
   return (
     <Container
       fluid="sm"
@@ -71,12 +71,12 @@ const ScanPage = () => {
             onError={handleError}
             onScan={webcamScan}
             onResult={webcamScan}
-            constraints={{facingMode:orientation}}
-            // facingMode={orientation}
+            // constraints={{facingMode:orientation}}
+            facingMode={orientation}
             style={{ width: '200px', heigth: '100px' }}
           ></QrReader>
         </Col>
-        <Row className="justify-content-center">
+        {/* <Row className="justify-content-center">
           {' '}
           <Button
             className="btnHandumanan"
@@ -86,7 +86,7 @@ const ScanPage = () => {
           >
             Flip
           </Button>
-        </Row>
+        </Row> */}
       </Row>
     </Container>
   );
