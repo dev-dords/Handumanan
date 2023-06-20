@@ -48,7 +48,7 @@ const ScanPage = () => {
         handleClose={handleClose}
         handleSave={handleClose}
         show={show}
-        confirmButton={false}
+        cancelButton={false}
       />
       <Row>
         <h3 className="text-center text-sm-start container-header">

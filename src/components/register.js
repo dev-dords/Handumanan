@@ -119,7 +119,7 @@ class RegisterPage extends Component {
           handleClose={this.handleClose}
           handleSave={this.handleSave}
           show={this.state.show}
-          confirmButton={true}
+          cancelButton={true}
         />
         <Row>
           <h3 className="text-center text-sm-start container-header">
