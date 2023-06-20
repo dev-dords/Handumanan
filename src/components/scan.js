@@ -70,7 +70,7 @@ const ScanPage = () => {
             onError={handleError}
             onScan={webcamScan}
             onResult={webcamScan}
-            facingMode={'user'}
+            facingMode={orientation}
             style={{ width: '200px', heigth: '100px' }}
           ></QrReader>
         </Col>
