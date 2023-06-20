@@ -80,10 +80,10 @@ select:focus {
 
 nav.navbar {
   padding: 0 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
-  z-index: 9999;
+  z-index: 9998;
   transition: 0.32s ease-in-out;
   background: rgb(149, 0, 255, 0.5);
 }
@@ -137,10 +137,11 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 
 .container-header {
   color: #a7ff19;
-  /* background: rgb(149, 0, 255, 0.2); */
+  -webkit-text-stroke: 1px #411159;
+  text-shadow: 0px 3px 4px #411159;
 }
 .form-container {
-  background: rgb(149, 0, 255, .8);
+  background: rgb(149, 0, 255, 0.8);
 }
 .btnHandumanan {
   margin: 20px 10px !important;
@@ -151,4 +152,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 .btnHandumanan:hover {
   color: #a7ff19 !important;
+}
+.modalComponent{
+  z-index:9999 !important;
 }
