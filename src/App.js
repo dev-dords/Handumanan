@@ -9,9 +9,9 @@ import { Route, Routes, redirect } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 function App() {
   return (
-    <div className="App">
-      <NavigationBar />
+    <div className="App banner">
       <main>
+        <NavigationBar />
         <Container>
           <Routes>
             <Route path="/Handumanan" element={<Homepage />} />

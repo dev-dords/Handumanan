@@ -122,12 +122,12 @@ class RegisterPage extends Component {
           confirmButton={true}
         />
         <Row>
-          <h3 className="text-center text-sm-start text-muted">
+          <h3 className="text-center text-sm-start container-header">
             Registration Form
           </h3>
         </Row>
         <Form
-          className="row shadow-lg p-5 bg-white rounded"
+          className="row shadow-lg p-5 rounded form-container"
           onSubmit={(e) => this.onSubmitHandler(e)}
         >
           <Col sm={12} md={8}>
@@ -192,33 +192,25 @@ class RegisterPage extends Component {
                 QR:
               </Form.Label>
             </Form.Group>
-              <div className="qrcode__container text-center" ref={this.qrImg}>{qrcode}</div>
+            <div className="qrcode__container text-center" ref={this.qrImg}>
+              {qrcode}
+            </div>
           </Col>
           <Row className="justify-content-center">
             <Button
-              variant="dark"
+              className="btnHandumanan"
               type="button"
               size="md"
               disabled={this.state.empty}
-              style={{
-                margin: '20px 10px',
-                maxWidth: '100px',
-                padding: '10px',
-              }}
               onClick={this.hashEmail}
             >
               Generate
             </Button>
             {this.state.generated && !this.state.empty && (
               <Button
+                className="btnHandumanan"
                 disabled={this.state.empty}
-                variant="success"
                 type="submit"
-                style={{
-                  margin: '20px 10px',
-                  maxWidth: '100px',
-                  padding: '10px',
-                }}
               >
                 Submit
               </Button>

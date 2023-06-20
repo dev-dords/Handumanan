@@ -49,11 +49,13 @@ p,
 a,
 li,
 button,
+label,
 ul {
   margin: 0;
   padding: 0;
   line-height: normal;
   text-decoration: none;
+  color: white;
 }
 
 a:hover {
@@ -83,10 +85,7 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition: 0.32s ease-in-out;
-}
-nav.navbar.scrolled {
-  padding: 0px 0;
-  background-color: #121212;
+  background: rgb(149, 0, 255, 0.5);
 }
 nav.navbar a.navbar-brand {
   width: 9%;
@@ -103,7 +102,13 @@ nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
 }
-
+.navLink {
+  color: #a7ff19 !important;
+  font-size: 18px !important;
+}
+.navBar {
+  padding: 10px 0 10px 0 !important;
+}
 .main-container {
   margin-top: 180px;
 }
@@ -117,4 +122,33 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   .main-container {
     margin-top: 200px;
   }
+}
+
+.banner {
+  margin-top: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 60px 0 180px 0;
+  background-image: url('./assets/Background.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.container-header {
+  color: #a7ff19;
+  /* background: rgb(149, 0, 255, 0.2); */
+}
+.form-container {
+  background: rgb(149, 0, 255, .8);
+}
+.btnHandumanan {
+  margin: 20px 10px !important;
+  max-width: 100px !important;
+  padding: 10px !important;
+  background-color: #411159 !important ;
+  border-color: #411159 !important;
+}
+.btnHandumanan:hover {
+  color: #a7ff19 !important;
 }

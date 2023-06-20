@@ -51,11 +51,11 @@ const ScanPage = () => {
         confirmButton={false}
       />
       <Row>
-        <h3 className="text-center text-sm-start text-muted">
+        <h3 className="text-center text-sm-start container-header">
           QR Code Scanner
         </h3>
       </Row>
-      <Row className="row shadow-lg p-5 bg-white rounded justify-content-center">
+      <Row className="row shadow-lg p-5 rounded justify-content-center form-container">
         <Col md={8}>
           <QrReader
             delay={500}
