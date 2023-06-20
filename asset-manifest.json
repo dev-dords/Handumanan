@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/Handumanan/static/css/main.ce08c299.css",
-    "main.js": "/Handumanan/static/js/main.99a809e0.js",
+    "main.css": "/Handumanan/static/css/main.ab568b16.css",
+    "main.js": "/Handumanan/static/js/main.50c9901d.js",
     "static/js/498.55766505.chunk.js": "/Handumanan/static/js/498.55766505.chunk.js",
     "static/js/703.8ea18249.chunk.js": "/Handumanan/static/js/703.8ea18249.chunk.js",
     "static/js/513.9588730d.chunk.js": "/Handumanan/static/js/513.9588730d.chunk.js",
     "static/js/787.d57f80d7.chunk.js": "/Handumanan/static/js/787.d57f80d7.chunk.js",
     "static/media/logo.jpg": "/Handumanan/static/media/logo.2ab0bde1bb9204ca7de7.jpg",
+    "static/media/CentraNo2-Bold.ttf": "/Handumanan/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/Handumanan/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/Handumanan/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
     "static/media/logo.svg": "/Handumanan/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Handumanan/index.html",
-    "main.ce08c299.css.map": "/Handumanan/static/css/main.ce08c299.css.map",
-    "main.99a809e0.js.map": "/Handumanan/static/js/main.99a809e0.js.map",
+    "main.ab568b16.css.map": "/Handumanan/static/css/main.ab568b16.css.map",
+    "main.50c9901d.js.map": "/Handumanan/static/js/main.50c9901d.js.map",
     "498.55766505.chunk.js.map": "/Handumanan/static/js/498.55766505.chunk.js.map",
     "703.8ea18249.chunk.js.map": "/Handumanan/static/js/703.8ea18249.chunk.js.map",
     "513.9588730d.chunk.js.map": "/Handumanan/static/js/513.9588730d.chunk.js.map",
     "787.d57f80d7.chunk.js.map": "/Handumanan/static/js/787.d57f80d7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce08c299.css",
-    "static/js/main.99a809e0.js"
+    "static/css/main.ab568b16.css",
+    "static/js/main.50c9901d.js"
   ]
 }
