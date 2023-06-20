@@ -39,7 +39,7 @@ const ScanPage = () => {
   return (
     <Container
       fluid="sm"
-      className="mainContainer justify-content-center text-align-center"
+      className="main-container justify-content-center text-align-center"
       style={{ maxWidth: '800px' }}
     >
       <ModalClass

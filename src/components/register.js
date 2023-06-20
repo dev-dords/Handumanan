@@ -110,7 +110,7 @@ class RegisterPage extends Component {
     return (
       <Container
         fluid="sm"
-        className="mainContainer justify-content-center text-align-center"
+        className="main-container justify-content-center text-align-center"
         style={{ maxWidth: '800px' }}
       >
         <ModalClass
@@ -192,9 +192,7 @@ class RegisterPage extends Component {
                 QR:
               </Form.Label>
             </Form.Group>
-            <div className="qrcode__container">
-              <div ref={this.qrImg}>{qrcode}</div>
-            </div>
+              <div className="qrcode__container text-center" ref={this.qrImg}>{qrcode}</div>
           </Col>
           <Row className="justify-content-center">
             <Button

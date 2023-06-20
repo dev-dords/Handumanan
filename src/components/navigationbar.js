@@ -8,10 +8,19 @@ export const NavigationBar = () => {
         <Navbar.Brand as={Link} to="/Handumanan">
           <img src={logo} width="90" height="90" alt="" />
         </Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link as={Link} to="/Handumanan/register">Register</Nav.Link>
-          <Nav.Link as={Link} to="/Handumanan/scan">Scan</Nav.Link>
-        </Nav>
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <span className="navbar-toggler-icon"></span>
+        </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/Handumanan/register">
+              Register
+            </Nav.Link>
+            <Nav.Link as={Link} to="/Handumanan/scan">
+              Scan
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
