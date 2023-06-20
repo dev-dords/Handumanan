@@ -38,6 +38,7 @@ const ScanPage = () => {
     setShow(false);
   };
   const handleFlip = () => {
+    console.log('clicked');
     if (orientation === 'user') {
       setOrientation('environment');
     } else {
@@ -70,7 +71,8 @@ const ScanPage = () => {
             onError={handleError}
             onScan={webcamScan}
             onResult={webcamScan}
-            facingMode={orientation}
+            constraints={{facingMode:orientation}}
+            // facingMode={orientation}
             style={{ width: '200px', heigth: '100px' }}
           ></QrReader>
         </Col>
