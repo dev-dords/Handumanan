@@ -40,7 +40,7 @@ const ScanPage = () => {
   const handleFlip = () => {
     console.log('clicked');
     if (orientation === 'user') {
-      setOrientation('environment');
+      setOrientation('rear');
     } else {
       setOrientation('user');
     }
