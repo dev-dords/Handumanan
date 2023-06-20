@@ -13,7 +13,7 @@ const ModalClass = (props) => {
         <Modal.Body>{props.message}</Modal.Body>
         <Modal.Footer>
           {props.cancelButton && (
-            <Button variant="secondary" onClick={props.handleClose}>
+            <Button className="btnHandumanan2" onClick={props.handleClose}>
               Cancel
             </Button>
           )}

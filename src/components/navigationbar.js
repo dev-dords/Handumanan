@@ -7,8 +7,9 @@ export const NavigationBar = () => {
       <Container>
         <Navbar.Brand as={Link} to="/Handumanan">
           {/* <img src={logo} width="90" height="90" alt="" /> */}
+          <span className="logo">Saramok</span>
         </Navbar.Brand>
-        <Nav className="me-auto">
+        <Nav>
           <Nav.Link as={Link} to="/Handumanan/register" className="navLink">
             Register
           </Nav.Link>

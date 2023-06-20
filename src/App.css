@@ -78,6 +78,9 @@ select:focus {
   outline: none;
 }
 
+.logo {
+  color: #a7ff19;
+}
 nav.navbar {
   padding: 0 0;
   position: absolute;
@@ -146,6 +149,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 .btnHandumanan {
   margin: 20px 10px !important;
   max-width: 100px !important;
+  min-width: 100px !important;
   padding: 10px !important;
   background-color: #411159 !important ;
   border-color: #411159 !important;
@@ -153,6 +157,17 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 .btnHandumanan:hover {
   color: #a7ff19 !important;
 }
-.modalComponent{
-  z-index:9999 !important;
+.btnHandumanan2 {
+  margin: 20px 10px !important;
+  max-width: 100px !important;
+  min-width: 100px !important;
+  padding: 10px !important;
+  background-color: #800020 !important ;
+  border-color: #800020 !important;
+}
+.btnHandumanan2:hover {
+  color: #ff5f1f !important;
+}
+.modalComponent {
+  z-index: 9999 !important;
 }
