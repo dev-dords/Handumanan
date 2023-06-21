@@ -19,6 +19,7 @@ class RegisterPage extends Component {
       show: false,
       referencenum: '',
       mop: '',
+      pricePaid: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.onSubmitHandler = this.onSubmitHandler.bind(this);
@@ -43,7 +44,8 @@ class RegisterPage extends Component {
       this.state.lastname !== '' &&
       this.state.year !== null &&
       this.state.email !== '' &&
-      this.state.referencenum !== ''
+      this.state.referencenum !== '' &&
+      this.state.pricePaid !== ''
     ) {
       this.setState({ empty: false });
     }
@@ -80,6 +82,8 @@ class RegisterPage extends Component {
       qrval: '',
       referencenum: '',
       empty: true,
+      pricePaid: '',
+      mop: '',
     });
   }
   handleSave() {
@@ -91,6 +95,7 @@ class RegisterPage extends Component {
       hashedid: this.state.qrval,
       mop: this.state.mop,
       referencenum: this.state.referencenum,
+      pricePaid: this.state.pricePaid,
     };
     axios
       .post(
@@ -115,6 +120,7 @@ class RegisterPage extends Component {
     doc.text(50, 120, `${this.state.year}`);
     doc.text(50, 133, `${this.state.email}`);
     doc.text(90, 167, `${this.state.mop}`);
+    doc.text(125, 167, `Price paid: ${this.state.pricePaid}`);
     doc.text(90, 176, `${this.state.referencenum}`);
     let canvas = this.qrImg.current.querySelector('canvas');
     let image = canvas.toDataURL('image/jpeg');
@@ -216,6 +222,21 @@ class RegisterPage extends Component {
                   <option value="Gcash">Gcash</option>
                   <option value="Bank">Bank</option>
                 </Form.Select>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className="my-3">
+              <Form.Label column sm={3}>
+                Price Paid:
+              </Form.Label>
+              <Col sm={9}>
+                <Form.Control
+                  type="number"
+                  name="pricePaid"
+                  onChange={this.handleChange}
+                  onPaste={this.handlePaste}
+                  value={this.state.pricePaid}
+                  autoComplete="off"
+                />
               </Col>
             </Form.Group>
             <Form.Group as={Row} className="my-3">
