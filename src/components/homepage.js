@@ -12,7 +12,7 @@ const Homepage = () => {
           <Row className="shadow rounded price-container">
             <h2
               className="text-center mt-3 price-header"
-              style={{ backgroundColor: '#a7ff19' }}
+              style={{ backgroundColor: 'rgb(28,215,89)' }}
             >
               Ticket Prices
             </h2>
@@ -29,15 +29,7 @@ const Homepage = () => {
             <span className="mt-1  ms-2 price-text">
               Php1600 – Bundle of 5 (before July 8 - 8pm only)
             </span>
-            <span
-              className="mt-4 price-text"
-              style={{ backgroundColor: '#a7ff19' }}
-            >
-              Payment: Hillary Baquilod
-            </span>
-            <span className="mt-1 ms-2 price-text2">GCash : 09173061696</span>
-            <span className="mt-1 ms-2 price-text2">BPI : 9159189071</span>
-            <span className="mt-4 price-text2">
+           <span className="mt-4 price-text2">
               * Tickets are inclusive of Snacks, free-flowing Drinks and a
               Raffle Entry.
             </span>

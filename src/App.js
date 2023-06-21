@@ -7,6 +7,7 @@ import { NavigationBar } from './components/navigationbar';
 import ScanPage from './components/scan';
 import { Route, Routes, redirect } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import { Payment } from './components/payment';
 function App() {
   return (
     <div className="App banner">
@@ -17,6 +18,7 @@ function App() {
             <Route path="/Handumanan" element={<Homepage />} />
             <Route path="/Handumanan/scan" element={<ScanPage />} />
             <Route path="/Handumanan/register" element={<RegisterPage />} />
+            <Route path="/Handumanan/payment" element={<Payment />} />
           </Routes>
         </Container>
       </main>

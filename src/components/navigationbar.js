@@ -13,6 +13,9 @@ export const NavigationBar = () => {
           <Nav.Link as={Link} to="/Handumanan/register" className="navLink">
             Register
           </Nav.Link>
+          <Nav.Link as={Link} to="/Handumanan/payment" className="navLink">
+            Payment
+          </Nav.Link>
           <Nav.Link as={Link} to="/Handumanan/scan" className="navLink">
             Scan
           </Nav.Link>
