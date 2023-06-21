@@ -111,8 +111,6 @@ class RegisterPage extends Component {
     doc.text(10, 50, `${this.state.email}`);
     doc.text(10, 60, 'Kindly show this qr code upon arrival at the venue.');
     let canvas = this.qrImg.current.querySelector('canvas');
-    canvas.width = 150;
-    canvas.height = 150;
     let image = canvas.toDataURL('image/jpeg');
     doc.addImage(image, 'JPEG', 50, 70, 50, 50);
     doc.save('qr.pdf');
