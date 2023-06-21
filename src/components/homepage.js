@@ -5,18 +5,23 @@ const Homepage = () => {
     <Container
       fluid="sm"
       className="main-container justify-content-center text-align-center"
-      style={{ maxWidth: '1000px' }}
+      style={{ maxWidth: '1100px' }}
     >
       <Row className="row shadow-lg p-5 rounded justify-content-center form-container">
         <Col sm={12} md={6}>
           <Row className="shadow rounded price-container">
-            <h2 className="text-center mt-3 price-header">Ticket Prices</h2>
+            <h2
+              className="text-center mt-3 price-header"
+              style={{ backgroundColor: '#a7ff19' }}
+            >
+              Ticket Prices
+            </h2>
             <span className="mt-1 ms-2 price-text">
-              Php350  – Regular Price (before July 8 - 8pm only)
+              Php350 – Regular Price (before July 8 - 8pm only)
             </span>
             <span className="mt-1  ms-2 price-text">Php400 – Door Price</span>
             <span className="mt-1  ms-2 price-text">
-              Php990  – Bundle of 3 (before July 8 - 8pm only)
+              Php990 – Bundle of 3 (before July 8 - 8pm only)
             </span>
             <span className="mt-1  ms-2 price-text">
               Php1300 – Bundle of 4 (before July 8 - 8pm only)
@@ -24,6 +29,14 @@ const Homepage = () => {
             <span className="mt-1  ms-2 price-text">
               Php1600 – Bundle of 5 (before July 8 - 8pm only)
             </span>
+            <span
+              className="mt-4 price-text"
+              style={{ backgroundColor: '#a7ff19' }}
+            >
+              Payment: Hillary Baquilod
+            </span>
+            <span className="mt-1 ms-2 price-text2">GCash : 09173061696</span>
+            <span className="mt-1 ms-2 price-text2">BPI : 9159189071</span>
             <span className="mt-4 price-text2">
               * Tickets are inclusive of Snacks, free-flowing Drinks and a
               Raffle Entry.
