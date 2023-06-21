@@ -5,6 +5,7 @@ import { sha256 } from 'crypto-hash';
 import axios from 'axios';
 import ModalClass from './modalclass';
 import { jsPDF } from 'jspdf';
+import { ticketbase } from './ticketbase64';
 class RegisterPage extends Component {
   constructor(props) {
     super(props);
@@ -30,6 +31,7 @@ class RegisterPage extends Component {
     this.handleEmpty = this.handleEmpty.bind(this);
     this.qrImg = createRef();
   }
+
   onSubmitHandler(e) {
     e.preventDefault();
     this.hashEmail();
@@ -104,15 +106,19 @@ class RegisterPage extends Component {
   }
   downloadQR() {
     var doc = new jsPDF();
-    doc.text(10, 10, 'Handumanan: Saramok Ticket Receipt');
-    doc.text(10, 20, 'Guest Details:');
-    doc.text(10, 30, `${this.state.firstname} ${this.state.lastname}`);
-    doc.text(10, 40, `${this.state.year}`);
-    doc.text(10, 50, `${this.state.email}`);
-    doc.text(10, 60, 'Kindly show this qr code upon arrival at the venue.');
+    var width = doc.internal.pageSize.getWidth();
+    var height = doc.internal.pageSize.getHeight();
+
+    var imgData = 'data:image/png;base64,' + ticketbase;
+    doc.addImage(imgData, 0, 0, width, height);
+    doc.text(50, 109, `${this.state.firstname} ${this.state.lastname}`);
+    doc.text(50, 120, `${this.state.year}`);
+    doc.text(50, 133, `${this.state.email}`);
+    doc.text(90, 167, `${this.state.mop}`);
+    doc.text(90, 176, `${this.state.referencenum}`);
     let canvas = this.qrImg.current.querySelector('canvas');
     let image = canvas.toDataURL('image/jpeg');
-    doc.addImage(image, 'JPEG', 50, 70, 50, 50);
+    doc.addImage(image, 'JPEG', 138, 203, 50, 50);
     doc.save('qr.pdf');
   }
   render() {
@@ -160,7 +166,7 @@ class RegisterPage extends Component {
                   value={this.state.firstname}
                   onChange={this.handleChange}
                   onPaste={this.handlePaste}
-                  autocomplete="off"
+                  autoComplete="off"
                 />
               </Col>
             </Form.Group>
@@ -175,7 +181,7 @@ class RegisterPage extends Component {
                   value={this.state.lastname}
                   onChange={this.handleChange}
                   onPaste={this.handlePaste}
-                  autocomplete="off"
+                  autoComplete="off"
                 />
               </Col>
             </Form.Group>
@@ -223,7 +229,7 @@ class RegisterPage extends Component {
                   onChange={this.handleChange}
                   onPaste={this.handlePaste}
                   value={this.state.referencenum}
-                  autocomplete="off"
+                  autoComplete="off"
                 />
               </Col>
             </Form.Group>
@@ -238,7 +244,7 @@ class RegisterPage extends Component {
                   onPaste={this.handlePaste}
                   onChange={this.handleChange}
                   value={this.state.email}
-                  autocomplete="off"
+                  autoComplete="off"
                 />
               </Col>
             </Form.Group>
