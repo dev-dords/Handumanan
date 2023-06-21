@@ -143,8 +143,23 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   -webkit-text-stroke: 1px #411159;
   text-shadow: 0px 3px 4px #411159;
 }
+.price-header {
+  color: #411159;
+}
 .form-container {
   background: rgb(149, 0, 255, 0.8);
+}
+.price-container {
+  background: rgb(255,221,9);
+  height: 100%;
+}
+.price-text {
+  color: #411159;
+  font-size: 18px;
+}
+.price-text2 {
+  color: #411159;
+  font-size:14px;
 }
 .btnHandumanan {
   margin: 20px 10px !important;
