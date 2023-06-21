@@ -119,7 +119,7 @@ class RegisterPage extends Component {
     let canvas = this.qrImg.current.querySelector('canvas');
     let image = canvas.toDataURL('image/jpeg');
     doc.addImage(image, 'JPEG', 138, 203, 50, 50);
-    doc.save('qr.pdf');
+    doc.save('Saramok Ticket.pdf');
   }
   render() {
     const qrcode = (
@@ -187,7 +187,7 @@ class RegisterPage extends Component {
             </Form.Group>
             <Form.Group as={Row} className="my-3 ">
               <Form.Label column sm={3}>
-                Year:
+                Batch:
               </Form.Label>
               <Col sm={9}>
                 <Form.Control
