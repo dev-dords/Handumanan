@@ -1,7 +1,7 @@
 import { Component, createRef } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { QRCodeCanvas } from 'qrcode.react';
-import { sha1 } from 'crypto-hash';
+import { sha256 } from 'crypto-hash';
 import axios from 'axios';
 import ModalClass from './modalclass';
 import { jsPDF } from 'jspdf';
@@ -14,9 +14,10 @@ class RegisterPage extends Component {
       year: '',
       email: '',
       qrval: '',
-      generated: false,
       empty: true,
       show: false,
+      referencenum: '',
+      mop: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.onSubmitHandler = this.onSubmitHandler.bind(this);
@@ -25,38 +26,59 @@ class RegisterPage extends Component {
     this.handleShow = this.handleShow.bind(this);
     this.handleSave = this.handleSave.bind(this);
     this.downloadQR = this.downloadQR.bind(this);
+    this.handlePaste = this.handlePaste.bind(this);
+    this.handleEmpty = this.handleEmpty.bind(this);
     this.qrImg = createRef();
   }
   onSubmitHandler(e) {
-    this.handleShow();
     e.preventDefault();
+    this.hashEmail();
   }
-  handleChange(e) {
-    if (e.target.name !== 'Year') {
-      this.setState({
-        [e.target.name]: e.target.value,
-      });
-    }
-    if (e.target.name === 'email') {
-      this.setState({ generated: false });
-    } else if (e.target.name === 'Year') {
-      this.setState({ year: e.target.value.toString() });
-    }
-    if (e.target.value === '') {
-      this.setState({ empty: true });
-    } else {
+  handleEmpty() {
+    if (
+      (this.state.mop !== null || this.state.mop !== '') &&
+      this.state.firstname !== '' &&
+      this.state.lastname !== '' &&
+      this.state.year !== null &&
+      this.state.email !== '' &&
+      this.state.referencenum !== ''
+    ) {
       this.setState({ empty: false });
     }
   }
-  async hashEmail(e) {
-    let value = await sha1(this.state.email);
-    this.setState({ qrval: value, generated: true });
+  handlePaste(e) {
+    this.setState({
+      [e.target.name]: e.clipboardData.getData('text'),
+    });
+    this.handleEmpty();
+  }
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value.toString(),
+    });
+    this.handleEmpty();
+    if (e.target.value.toString() === '') {
+      this.setState({ empty: true });
+    }
+  }
+  async hashEmail() {
+    let value = await sha256(this.state.email);
+    this.setState({ qrval: value });
+    this.handleShow();
   }
   handleShow() {
     this.setState({ show: true });
   }
   handleClose() {
-    this.setState({ show: false });
+    this.setState({
+      show: false,
+      firstname: '',
+      lastname: '',
+      email: '',
+      qrval: '',
+      referencenum: '',
+      empty: true,
+    });
   }
   handleSave() {
     const data = {
@@ -65,6 +87,8 @@ class RegisterPage extends Component {
       year: this.state.year,
       email: this.state.email,
       hashedid: this.state.qrval,
+      mop: this.state.mop,
+      referencenum: this.state.referencenum,
     };
     axios
       .post(
@@ -75,13 +99,7 @@ class RegisterPage extends Component {
         this.downloadQR();
       })
       .then(() => {
-        this.setState({
-          firstname: '',
-          lastname: '',
-          email: '',
-          qrval: '',
-          show: false,
-        });
+        this.handleClose();
       });
   }
   downloadQR() {
@@ -93,6 +111,8 @@ class RegisterPage extends Component {
     doc.text(10, 50, `${this.state.email}`);
     doc.text(10, 60, 'Kindly show this qr code upon arrival at the venue.');
     let canvas = this.qrImg.current.querySelector('canvas');
+    canvas.width = 150;
+    canvas.height = 150;
     let image = canvas.toDataURL('image/jpeg');
     doc.addImage(image, 'JPEG', 50, 70, 50, 50);
     doc.save('qr.pdf');
@@ -141,6 +161,8 @@ class RegisterPage extends Component {
                   name="firstname"
                   value={this.state.firstname}
                   onChange={this.handleChange}
+                  onPaste={this.handlePaste}
+                  autocomplete="off"
                 />
               </Col>
             </Form.Group>
@@ -154,6 +176,8 @@ class RegisterPage extends Component {
                   name="lastname"
                   value={this.state.lastname}
                   onChange={this.handleChange}
+                  onPaste={this.handlePaste}
+                  autocomplete="off"
                 />
               </Col>
             </Form.Group>
@@ -167,8 +191,41 @@ class RegisterPage extends Component {
                   min="1994"
                   max="2023"
                   step="1"
-                  name="Year"
+                  name="year"
                   onChange={this.handleChange}
+                />
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} className="my-3">
+              <Form.Label column sm={3}>
+                Payment:
+              </Form.Label>
+              <Col sm={9}>
+                <Form.Select
+                  type="select"
+                  name="mop"
+                  onChange={this.handleChange}
+                  value={this.state.mop}
+                >
+                  <option value=""></option>
+                  <option value="Gcash">Gcash</option>
+                  <option value="Bank">Bank</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className="my-3">
+              <Form.Label column sm={3}>
+                Reference #:
+              </Form.Label>
+              <Col sm={9}>
+                <Form.Control
+                  type="text"
+                  name="referencenum"
+                  onChange={this.handleChange}
+                  onPaste={this.handlePaste}
+                  value={this.state.referencenum}
+                  autocomplete="off"
                 />
               </Col>
             </Form.Group>
@@ -180,8 +237,10 @@ class RegisterPage extends Component {
                 <Form.Control
                   type="text"
                   name="email"
+                  onPaste={this.handlePaste}
                   onChange={this.handleChange}
                   value={this.state.email}
+                  autocomplete="off"
                 />
               </Col>
             </Form.Group>
@@ -199,22 +258,12 @@ class RegisterPage extends Component {
           <Row className="justify-content-center">
             <Button
               className="btnHandumanan"
-              type="button"
+              type="submit"
               size="md"
               disabled={this.state.empty}
-              onClick={this.hashEmail}
             >
-              Generate
+              Submit
             </Button>
-            {this.state.generated && !this.state.empty && (
-              <Button
-                className="btnHandumanan"
-                disabled={this.state.empty}
-                type="submit"
-              >
-                Submit
-              </Button>
-            )}
           </Row>
         </Form>
       </Container>
