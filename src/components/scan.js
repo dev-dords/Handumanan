@@ -52,7 +52,7 @@ const ScanPage = () => {
         cancelButton={false}
       />
       <Row>
-        <h3 className="text-center text-sm-start container-header">
+        <h3 className="text-center text-sm-start notes-text">
           QR Code Scanner
         </h3>
       </Row>

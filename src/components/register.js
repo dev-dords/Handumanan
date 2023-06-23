@@ -152,7 +152,7 @@ class RegisterPage extends Component {
           cancelButton={true}
         />
         <Row>
-          <h3 className="text-center text-sm-start container-header">
+          <h3 className="text-center text-sm-start notes-text">
             Registration Form
           </h3>
         </Row>
