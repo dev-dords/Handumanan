@@ -1,5 +1,5 @@
 import { Col, Container, Row } from 'react-bootstrap';
-
+import CarouselItems from './carousel';
 const Homepage = () => {
   return (
     <>
@@ -59,11 +59,12 @@ const Homepage = () => {
         }}
       >
         <div className="purpose-title text-md-center">PURPOSE OF THE MIXER</div>
-        <div className="purpose-text text-md-center mt-2">
+        <div className="purpose-text text-md-center mt-2 mb-2">
           Saramok is a fundraising event to support our socio-civic activities,
           including the Sta. Rita Medical Mission, Donation Drives for a
           community project and elementary school, and Pisay Cares Sponsorship.
         </div>
+        <CarouselItems/>
       </Container>
     </>
   );
