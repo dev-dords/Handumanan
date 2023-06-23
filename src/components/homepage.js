@@ -58,7 +58,7 @@ const Homepage = () => {
           background: '#A32EFF',
         }}
       >
-        <div className="purpose-title text-md-center">PURPOSE OF THE MIXER</div>
+        <div className="purpose-title text-md-center">PURPOSE OF SARAMOK</div>
         <div className="purpose-text text-md-center mt-2 mb-2">
           Saramok is a fundraising event to support our socio-civic activities,
           including the Sta. Rita Medical Mission, Donation Drives for a
