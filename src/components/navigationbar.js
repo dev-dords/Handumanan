@@ -1,14 +1,24 @@
-import { Container, Navbar, Nav } from 'react-bootstrap';
-import logo from '../assets/logo.jpg';
+import { Container, Navbar, Nav, Row } from 'react-bootstrap';
+import cocktail from '../assets/cocktail.svg';
 import { Link } from 'react-router-dom';
 export const NavigationBar = () => {
   return (
     <Navbar className="navBar">
       <Container>
         <Navbar.Brand as={Link} to="/Handumanan">
-          {/* <img src={logo} width="90" height="90" alt="" /> */}
-          <span className="logo">Saramok</span>
+          <span className="logo">
+            Saramok
+            <img
+              src={cocktail}
+              alt=""
+              style={{
+                maxWidth: '30px',
+                maxHeight: '30px',
+              }}
+            />
+          </span>
         </Navbar.Brand>
+
         <Nav>
           <Nav.Link as={Link} to="/Handumanan/register" className="navLink">
             Register

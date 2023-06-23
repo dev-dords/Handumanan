@@ -15,6 +15,16 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: BrushScript;
+  src: url('./assets/font/brushscript.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: Lowball-Medium;
+  src: url('./assets/font/lowball.ttf');
+  font-weight: 600;
+}
 * {
   margin: 0;
   padding: 0;
@@ -112,20 +122,6 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 .navBar {
   padding: 10px 0 10px 0 !important;
 }
-.main-container {
-  margin-top: 180px;
-}
-
-@media (min-width: 280px) {
-  .main-container {
-    margin-top: 100px;
-  }
-}
-@media (min-width: 700px) {
-  .main-container {
-    margin-top: 200px;
-  }
-}
 
 .banner {
   margin-top: 0;
@@ -137,29 +133,65 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   background-size: cover;
   background-repeat: repeat;
 }
-
+.main-container {
+  margin-top: 180px;
+}
 .container-header {
   color: #a7ff19;
   -webkit-text-stroke: 1px #411159;
   text-shadow: 0px 3px 4px #411159;
 }
-.price-header {
-  color: #411159;
-}
 .form-container {
   background: rgb(149, 0, 255, 0.8);
 }
-.price-container {
-  background: rgb(255,221,9);
-  height: 100%;
+.bundle-container {
+  margin: 10px auto;
+  min-width: 220px;
+  max-width: 350px;
+  height: 150px;
+  border: 1px solid rgb(255, 221, 9);
+  border-radius: 100%;
+  box-shadow: 10px 10px 50px 5px rgb(243, 62, 112);
 }
-.price-text {
-  color: #411159;
-  font-size: 18px;
+.bundle-title {
+  font-family: Centra;
+  font-weight: 700;
+  font-size: 40px;
+  color: rgb(255, 193, 107);
+  -webkit-text-stroke: 1px #411159;
+  text-shadow: 3px 3px 10px #411159;
 }
-.price-text2 {
-  color: #411159;
-  font-size:14px;
+.bundle-text {
+  font-family: BrushScript;
+  font-size: 40px;
+  color: rgb(255, 221, 9);
+  text-shadow: 5px 5px 5px rgb(243, 62, 112);
+}
+.bundle-price {
+  color: rgb(243, 62, 112);
+  font-size: 40px;
+  font-family: Lowball-Medium;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.notes-text {
+  font-family: Centra;
+  font-weight: 700;
+  font-size: 25px;
+  color: rgb(255, 193, 107);
+  -webkit-text-stroke: 1px rgb(243, 62, 112);
+  text-shadow: 3px 3px 10px #411159;
+}
+.single-text {
+  font-family: BrushScript;
+  font-size: 35px;
+  color: rgb(220, 211, 211);
+}
+.single-price {
+  color: #a7ff19;
+  font-size: 30px;
+  font-family: Lowball-Medium;
 }
 .btnHandumanan {
   margin: 20px 10px !important;
@@ -185,4 +217,15 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 .modalComponent {
   z-index: 9999 !important;
+}
+
+@media (min-width: 280px) {
+  .main-container {
+    margin-top: 100px;
+  }
+}
+@media (min-width: 700px) {
+  .main-container {
+    margin-top: 200px;
+  }
 }

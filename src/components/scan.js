@@ -37,14 +37,6 @@ const ScanPage = () => {
   const handleClose = () => {
     setShow(false);
   };
-  // const handleFlip = () => {
-  //   console.log('clicked');
-  //   if (orientation === 'user') {
-  //     setOrientation('rear');
-  //   } else {
-  //     setOrientation('user');
-  //   }
-  // };
   return (
     <Container
       fluid="sm"
@@ -76,17 +68,6 @@ const ScanPage = () => {
             style={{ width: '200px', heigth: '100px' }}
           ></QrReader>
         </Col>
-        {/* <Row className="justify-content-center">
-          {' '}
-          <Button
-            className="btnHandumanan"
-            type="button"
-            size="md"
-            onClick={handleFlip}
-          >
-            Flip
-          </Button>
-        </Row> */}
       </Row>
     </Container>
   );
