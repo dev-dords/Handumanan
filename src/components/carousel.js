@@ -10,7 +10,7 @@ import ten from '../assets/paskowela/10.jpg';
 const CarouselItems = () => {
   return (
     <Carousel>
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <img className="d-block w-100" alt="" src={two} />
         </Carousel.Item>
         <Carousel.Item>
@@ -33,7 +33,7 @@ const CarouselItems = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" alt="" src={ten} />
-        </Carousel.Item>
+        </Carousel.Item> */}
       </Carousel>
   );
 };
