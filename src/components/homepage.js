@@ -64,7 +64,7 @@ const Homepage = () => {
           including the Sta. Rita Medical Mission, Donation Drives for a
           community project and elementary school, and Pisay Cares Sponsorship.
         </div>
-        <CarouselItems/>
+        {/* <CarouselItems/> */}
       </Container>
     </>
   );
