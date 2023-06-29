@@ -20,7 +20,7 @@ function App() {
             <Route path="/Handumanan/scan" element={<ScanPage />} />
             <Route path="/Handumanan/register" element={<RegisterPage />} />
             <Route path="/Handumanan/payment" element={<Payment />} />
-            {/* <Route path="/Handumanan/jrd" element={<AdminHome />} /> */}
+            <Route path="/Handumanan/jrd" element={<AdminHome />} />
           </Routes>
         </Container>
       </main>
