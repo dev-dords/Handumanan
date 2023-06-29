@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useMemo } from 'react';
 import { AdminTable } from './adminTable';
 import { Col, Container, Form, Row } from 'react-bootstrap';
+import { AdminPagination } from './adminPagination';
 
 export const AdminHome = () => {
   //load initial state
@@ -19,9 +20,6 @@ export const AdminHome = () => {
   const [search, setSearch] = useState('');
   const [queryState, setQueryState] = useState('name');
 
-  const setPage = (pageNum) => {
-    //function to pass to pagination to setCurrentPage ang re-render Reactive Table.
-  };
   const queryHandler = (e) => {
     e.preventDefault();
     setCurrentPage(0);
@@ -106,7 +104,11 @@ export const AdminHome = () => {
           search={search}
         />
       </Container>
-      {/* Pagination  totalPages,currentpage for display onli*/}
+      <AdminPagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        setPage={(page) => setCurrentPage(page)}
+      />
     </div>
   );
 };
