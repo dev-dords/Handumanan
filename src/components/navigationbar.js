@@ -15,7 +15,7 @@ export const NavigationBar = () => {
           />
         </Navbar.Brand>
 
-        <Nav>
+        <Nav className="responsiveNav">
           <Nav.Link as={Link} to="/Handumanan/register" className="navLink">
             Register
           </Nav.Link>
@@ -24,6 +24,9 @@ export const NavigationBar = () => {
           </Nav.Link>
           <Nav.Link as={Link} to="/Handumanan/scan" className="navLink">
             Scan
+          </Nav.Link>{' '}
+          <Nav.Link as={Link} to="/Handumanan/admin" className="navLink">
+            Admin
           </Nav.Link>
         </Nav>
       </Container>
