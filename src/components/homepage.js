@@ -5,8 +5,8 @@ const Homepage = () => {
     <>
       <Container
         fluid="sm"
-        className="form-container shadow-lg justify-content-center text-center rounded  p-5"
-        style={{ maxWidth: '1000px', marginTop: '50px' }}
+        className="main-container form-container shadow-lg justify-content-center text-center rounded  p-5"
+        style={{ maxWidth: '1000px' }}
       >
         <Row>
           <span className="bundle-title">BARKADA PACKAGE</span>
