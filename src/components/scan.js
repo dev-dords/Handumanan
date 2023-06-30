@@ -21,7 +21,7 @@ const ScanPage = () => {
           }
         )
         .then((response) => {
-          setMessage(response);
+          setMessage(JSON.stringify(response));
           setShow(true);
         });
     }
