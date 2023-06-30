@@ -8,7 +8,7 @@ export const AdminLog = () => {
     setPass(e.target.value.toString());
   };
   const onSubmitHandler = (e) => {
-    pass === process.env.ADMIN_PASS ? setLogged(true) : setLogged(false);
+    pass === 'Hinungdan2013' ? setLogged(true) : setLogged(false);
   };
   return (
     <>
