@@ -8,7 +8,7 @@ export const AdminLog = () => {
     setPass(e.target.value.toString());
   };
   const onSubmitHandler = (e) => {
-    pass === "Hinungdan2013" ? setLogged(true) : setLogged(false);
+    pass === 'Hinungdan2013' ? setLogged(true) : setLogged(false);
   };
   return (
     <>
@@ -37,7 +37,14 @@ export const AdminLog = () => {
               </Col>
             </Form.Group>
             <Row className="justify-content-end">
-              <Button className="btnHandumanan" type="submit" size="sm">
+              <Button
+                className="btnHandumanan"
+                type="button"
+                size="sm"
+                onClick={(e) => {
+                  onSubmitHandler(e);
+                }}
+              >
                 Submit
               </Button>
             </Row>
