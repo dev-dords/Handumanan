@@ -58,11 +58,12 @@ class RegisterPage extends Component {
   }
   handleChange(e) {
     this.setState({
-      [e.target.name]: e.target.value.toString(),
+      [e.target.name]: e.target.value.toString().trim(),
     });
-    this.handleEmpty();
-    if (e.target.value.toString() === '') {
+    if (e.target.value.toString().trim() === '') {
       this.setState({ empty: true });
+    } else {
+      this.handleEmpty();
     }
   }
   async hashEmail() {
