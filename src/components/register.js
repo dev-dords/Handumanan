@@ -157,6 +157,12 @@ class RegisterPage extends Component {
             Registration Form
           </h3>
         </Row>
+        <Row className="rowNote rounded">
+          <span className="text-center text-sm-start textNote">
+            *Please complete payment prior to filling up this form or input "event"
+            if you would like to pay at the venue.*
+          </span>
+        </Row>
         <Form
           className="row shadow-lg p-5 rounded form-container"
           onSubmit={(e) => this.onSubmitHandler(e)}
