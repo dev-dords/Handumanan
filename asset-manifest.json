@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Handumanan/static/css/main.ae43beb8.css",
-    "main.js": "/Handumanan/static/js/main.5a0e9dd1.js",
+    "main.js": "/Handumanan/static/js/main.7855b75f.js",
     "static/js/498.55766505.chunk.js": "/Handumanan/static/js/498.55766505.chunk.js",
     "static/js/703.8ea18249.chunk.js": "/Handumanan/static/js/703.8ea18249.chunk.js",
     "static/js/513.9588730d.chunk.js": "/Handumanan/static/js/513.9588730d.chunk.js",
@@ -16,7 +16,7 @@
     "static/media/lowball.ttf": "/Handumanan/static/media/lowball.fa17109c239295c02d20.ttf",
     "index.html": "/Handumanan/index.html",
     "main.ae43beb8.css.map": "/Handumanan/static/css/main.ae43beb8.css.map",
-    "main.5a0e9dd1.js.map": "/Handumanan/static/js/main.5a0e9dd1.js.map",
+    "main.7855b75f.js.map": "/Handumanan/static/js/main.7855b75f.js.map",
     "498.55766505.chunk.js.map": "/Handumanan/static/js/498.55766505.chunk.js.map",
     "703.8ea18249.chunk.js.map": "/Handumanan/static/js/703.8ea18249.chunk.js.map",
     "513.9588730d.chunk.js.map": "/Handumanan/static/js/513.9588730d.chunk.js.map",
@@ -24,6 +24,6 @@
   },
   "entrypoints": [
     "static/css/main.ae43beb8.css",
-    "static/js/main.5a0e9dd1.js"
+    "static/js/main.7855b75f.js"
   ]
 }
