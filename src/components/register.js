@@ -159,7 +159,7 @@ class RegisterPage extends Component {
         </Row>
         <Row className="rowNote rounded">
           <span className="text-center text-sm-start textNote">
-            *Please complete payment prior to filling up this form or input "event"
+            *Please complete payment prior to filling up this form or input "event" on the reference number field
             if you would like to pay at the venue.*
           </span>
         </Row>
