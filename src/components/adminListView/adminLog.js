@@ -8,6 +8,7 @@ export const AdminLog = () => {
     setPass(e.target.value.toString());
   };
   const onSubmitHandler = (e) => {
+    e.preventDefault();
     pass === process.env.REACT_APP_ADMIN_PASS
       ? setLogged(true)
       : setLogged(false);
