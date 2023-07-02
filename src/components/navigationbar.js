@@ -25,9 +25,9 @@ export const NavigationBar = () => {
           <Nav.Link as={Link} to="/Handumanan/scan" className="navLink">
             Scan
           </Nav.Link>{' '}
-          {/* <Nav.Link as={Link} to="/Handumanan/admin" className="navLink">
+          <Nav.Link as={Link} to="/Handumanan/admin" className="navLink">
             Admin
-          </Nav.Link> */}
+          </Nav.Link>
         </Nav>
       </Container>
     </Navbar>

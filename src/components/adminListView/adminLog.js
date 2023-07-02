@@ -8,7 +8,9 @@ export const AdminLog = () => {
     setPass(e.target.value.toString());
   };
   const onSubmitHandler = (e) => {
-    pass === 'Hinungdan2013' ? setLogged(true) : setLogged(false);
+    pass === process.env.REACT_APP_ADMIN_PASS
+      ? setLogged(true)
+      : setLogged(false);
   };
   return (
     <>
