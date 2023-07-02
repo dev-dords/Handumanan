@@ -56,7 +56,7 @@ export const AdminTable = (props) => {
         show={show}
         cancelButton={true}
       />
-      <Table bordered hover striped responsive="sm" variant="dark">
+      <Table bordered hover striped responsive variant="dark">
         <thead>
           <tr>
             <th>First Name</th>
