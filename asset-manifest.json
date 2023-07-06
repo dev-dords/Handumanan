@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Handumanan/static/css/main.ae43beb8.css",
-    "main.js": "/Handumanan/static/js/main.760aa5dd.js",
+    "main.css": "/Handumanan/static/css/main.b20a422e.css",
+    "main.js": "/Handumanan/static/js/main.3fd4373e.js",
     "static/js/498.55766505.chunk.js": "/Handumanan/static/js/498.55766505.chunk.js",
     "static/js/703.8ea18249.chunk.js": "/Handumanan/static/js/703.8ea18249.chunk.js",
-    "static/js/513.9588730d.chunk.js": "/Handumanan/static/js/513.9588730d.chunk.js",
+    "static/js/513.86d7293a.chunk.js": "/Handumanan/static/js/513.86d7293a.chunk.js",
     "static/js/787.d57f80d7.chunk.js": "/Handumanan/static/js/787.d57f80d7.chunk.js",
     "static/media/Background.jpg": "/Handumanan/static/media/Background.12fbe10ab7f6112b359a.jpg",
     "static/media/saramok.png": "/Handumanan/static/media/saramok.f68327b549fbdb08053a.png",
@@ -14,16 +14,17 @@
     "static/media/CentraNo2-Book.ttf": "/Handumanan/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
     "static/media/brushscript.ttf": "/Handumanan/static/media/brushscript.a8c79ff3c6ee20c7d44e.ttf",
     "static/media/lowball.ttf": "/Handumanan/static/media/lowball.fa17109c239295c02d20.ttf",
+    "static/media/logo.svg": "/Handumanan/static/media/logo.c4428164336475a6da8f7540b961e82f.svg",
     "index.html": "/Handumanan/index.html",
-    "main.ae43beb8.css.map": "/Handumanan/static/css/main.ae43beb8.css.map",
-    "main.760aa5dd.js.map": "/Handumanan/static/js/main.760aa5dd.js.map",
+    "main.b20a422e.css.map": "/Handumanan/static/css/main.b20a422e.css.map",
+    "main.3fd4373e.js.map": "/Handumanan/static/js/main.3fd4373e.js.map",
     "498.55766505.chunk.js.map": "/Handumanan/static/js/498.55766505.chunk.js.map",
     "703.8ea18249.chunk.js.map": "/Handumanan/static/js/703.8ea18249.chunk.js.map",
-    "513.9588730d.chunk.js.map": "/Handumanan/static/js/513.9588730d.chunk.js.map",
+    "513.86d7293a.chunk.js.map": "/Handumanan/static/js/513.86d7293a.chunk.js.map",
     "787.d57f80d7.chunk.js.map": "/Handumanan/static/js/787.d57f80d7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae43beb8.css",
-    "static/js/main.760aa5dd.js"
+    "static/css/main.b20a422e.css",
+    "static/js/main.3fd4373e.js"
   ]
 }
