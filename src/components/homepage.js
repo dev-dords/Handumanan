@@ -1,5 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import CarouselItems from './carousel';
+import { ProgBar } from './progbar';
 const Homepage = () => {
   return (
     <>
@@ -49,6 +50,7 @@ const Homepage = () => {
           </span>
         </Row>
       </Container>
+      <ProgBar />
       <Container
         fluid="sm"
         className="shadow-lg justify-content-center rounded  p-5"
@@ -64,7 +66,7 @@ const Homepage = () => {
           including the Sta. Rita Medical Mission, Donation Drives for a
           community project and elementary school, and Pisay Cares Sponsorship.
         </div>
-        <CarouselItems/>
+        <CarouselItems />
       </Container>
     </>
   );

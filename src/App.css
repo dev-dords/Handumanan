@@ -33,7 +33,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 75px;
 }
 
 body {
@@ -236,6 +235,23 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-style: italic;
 }
+.progressbar {
+  position: relative;
+  overflow: hidden;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #9815ff;
+}
+.wine-wiggle {
+  animation: wiggle 0.5s infinite;
+}
+.donation-text {
+  font-family: Centra;
+  font-weight: 500;
+  font-size: 18px;
+  color: #a7ff19;
+  text-shadow: 3px 3px 10px #411159;
+}
 @media (min-width: 280px) {
   .main-container {
     margin-top: 100px;
@@ -250,5 +266,22 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   }
   .responsiveNav {
     margin-top: 0;
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
