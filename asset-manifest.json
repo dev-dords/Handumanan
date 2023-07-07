@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Handumanan/static/css/main.b20a422e.css",
-    "main.js": "/Handumanan/static/js/main.3fd4373e.js",
+    "main.js": "/Handumanan/static/js/main.47e03057.js",
     "static/js/498.55766505.chunk.js": "/Handumanan/static/js/498.55766505.chunk.js",
     "static/js/703.8ea18249.chunk.js": "/Handumanan/static/js/703.8ea18249.chunk.js",
     "static/js/513.86d7293a.chunk.js": "/Handumanan/static/js/513.86d7293a.chunk.js",
@@ -17,7 +17,7 @@
     "static/media/logo.svg": "/Handumanan/static/media/logo.c4428164336475a6da8f7540b961e82f.svg",
     "index.html": "/Handumanan/index.html",
     "main.b20a422e.css.map": "/Handumanan/static/css/main.b20a422e.css.map",
-    "main.3fd4373e.js.map": "/Handumanan/static/js/main.3fd4373e.js.map",
+    "main.47e03057.js.map": "/Handumanan/static/js/main.47e03057.js.map",
     "498.55766505.chunk.js.map": "/Handumanan/static/js/498.55766505.chunk.js.map",
     "703.8ea18249.chunk.js.map": "/Handumanan/static/js/703.8ea18249.chunk.js.map",
     "513.86d7293a.chunk.js.map": "/Handumanan/static/js/513.86d7293a.chunk.js.map",
@@ -25,6 +25,6 @@
   },
   "entrypoints": [
     "static/css/main.b20a422e.css",
-    "static/js/main.3fd4373e.js"
+    "static/js/main.47e03057.js"
   ]
 }
